@@ -5,8 +5,8 @@ A grunt-init scaffold for reusable Node Modules.
 
 This scaffolds configures a bare-bones module with a single function, as well as basic unit test for said function.
 
-It also provides maintainability analytics out of the box with Plato,
-as well as JSDocs documentation.
+It also provides maintainability analytics out of the box with Plato, code coverage reports with Istanbul,
+and automated documentation with JSDocs.
 
 To utilize these tools and analytics, after deploying your development environment, navigate to `http://127.0.0.1:9001/`
 
