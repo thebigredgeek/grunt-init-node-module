@@ -22,8 +22,14 @@ module.exports = function(grunt){
                 pushTo: 'origin'
             }
         },
-        nodeunit:{
-            all:['test/**/*.spec.js']
+        jasmine_node:{
+            coverage:{
+                savePath:'analytics/coverage',
+                print: 'none'
+            },
+            projectRoot: ".",
+            requirejs:false,
+            forceExit:true
         },
         connect:{
             server:{
@@ -112,6 +118,6 @@ module.exports = function(grunt){
         }
     }
     grunt.registerTask('default',["concurrent"]);
-    grunt.registerTask('test',['jshint','nodeunit','plato','jsdoc']);
-    grunt.registerTask('dist',['jshint','nodeunit','plato','jsdoc','bump']);
+    grunt.registerTask('test',['jshint','jasmine_node','plato','jsdoc']);
+    grunt.registerTask('dist',['jshint','jasmine_node','plato','jsdoc','bump']);
 };

@@ -1,7 +1,7 @@
 var app = require(__dirname+'/../index.js');
 
-exports.test = function(test){
-    test.expect(1);
-    test.ok(true,'world' == app.hello());
-    test.done();
-};
+describe("test",function(){
+    it("has a function called hello that returns world",function(){
+        expect(app.hello()).toEqual('world');
+    });
+});
